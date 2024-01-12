@@ -1,0 +1,15 @@
+{% extends 'fresh_app/base.html' %}
+{% block body_block %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1> Please fill out the form!</h1>
+        <form method="post" action="">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="SUBMIT">
+        </form>
+    </div>
+</div>
+{% endblock %}

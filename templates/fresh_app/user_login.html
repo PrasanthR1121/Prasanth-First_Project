@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'fresh_app/base.html' %}
+{% block body_block %}
+<div class="container">
+<form action="{% url 'user_login' %}" method="POST">
+    {% csrf_token %}
+    <label>Username</label>
+    <input type="text" name="name">
+    <label>Password</label>
+    <input type="password" name="password">
+    <input type="submit" class="btn btn-secondary" value="Submit">
+</form>
+</div>
+{% endblock %}
